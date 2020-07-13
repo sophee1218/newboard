@@ -8,7 +8,7 @@
 String title = request.getParameter("title"); 
 String content = request.getParameter("content"); 
 String creusr = request.getParameter("creusr");
-Connection con = Connector.getConnection();
+Connection con = Connector.getCon();
 String sql ="insert into board(num, title, content, credat, cretim, creusr)\r\n" + 
 		"values(\r\n" + 
 		"(select nvl(max(num),0)+1 from board),\r\n" + 

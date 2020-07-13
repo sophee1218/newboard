@@ -11,7 +11,7 @@
 </head>
 <body>
 	<%
-Connection con = Connector.getConnection();
+Connection con = Connector.getCon();
 String sql = "select num, title, content, credat, creusr";
 PreparedStatement ps = con.prepareStatement(sql);
 ResultSet rs = ps.executeQuery();
